@@ -18,7 +18,7 @@ pipeline{
 
                     withSonarQubeEnv(credentialsId: 'sonar-token') {
                         
-                        sh 'mvn clean package sonar:sonar'
+                        sh 'mvn clean install sonar:sonar'
                     }
                 }
             }
