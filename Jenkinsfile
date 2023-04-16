@@ -18,7 +18,7 @@ pipeline{
 
                     withSonarQubeEnv(credentialsId: 'sonar-token') {
                         
-                        sh 'mvn clean install sonar:sonar -e'
+                        sh 'mvn clean install sonar:sonar -Dmaven.repo.local=/var/lib/jenkins/.m2/repository'
                     }
                 }
             }
